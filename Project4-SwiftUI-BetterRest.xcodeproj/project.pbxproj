@@ -13,6 +13,7 @@
 		37D5F25C24E2DB680045C0BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D5F25B24E2DB680045C0BD /* Assets.xcassets */; };
 		37D5F25F24E2DB680045C0BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D5F25E24E2DB680045C0BD /* Preview Assets.xcassets */; };
 		37D5F26224E2DB680045C0BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D5F26024E2DB680045C0BD /* LaunchScreen.storyboard */; };
+		37D5F26A24E32E7C0045C0BD /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 37D5F26924E32E7C0045C0BD /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		37D5F25E24E2DB680045C0BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37D5F26124E2DB680045C0BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37D5F26324E2DB680045C0BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D5F26924E32E7C0045C0BD /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				37D5F25B24E2DB680045C0BD /* Assets.xcassets */,
 				37D5F26024E2DB680045C0BD /* LaunchScreen.storyboard */,
 				37D5F26324E2DB680045C0BD /* Info.plist */,
+				37D5F26924E32E7C0045C0BD /* SleepCalculator.mlmodel */,
 				37D5F25D24E2DB680045C0BD /* Preview Content */,
 			);
 			path = "Project4-SwiftUI-BetterRest";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D5F25624E2DB670045C0BD /* AppDelegate.swift in Sources */,
+				37D5F26A24E32E7C0045C0BD /* SleepCalculator.mlmodel in Sources */,
 				37D5F25824E2DB670045C0BD /* SceneDelegate.swift in Sources */,
 				37D5F25A24E2DB670045C0BD /* ContentView.swift in Sources */,
 			);
