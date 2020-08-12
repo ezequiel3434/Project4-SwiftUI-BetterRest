@@ -40,14 +40,22 @@ struct ContentView: View {
                 }
                 }
                 Section(header: Text("Daily coffee intake")){
+                    
+                    Picker(selection:  $coffeeAmount, label: Text("Select a color")) {
+                        ForEach((1...20), id: \.self) {
+                            Text("\($0)")
+                        }
+                    }.labelsHidden()
+                    .pickerStyle(WheelPickerStyle())
+
                 
-                Stepper(value: $coffeeAmount, in: 1...20) {
-                    if coffeeAmount == 1 {
-                        Text("1 cup")
-                    } else {
-                        Text("\(coffeeAmount) cups")
-                    }
-                }
+//                Stepper(value: $coffeeAmount, in: 1...20) {
+//                    if coffeeAmount == 1 {
+//                        Text("1 cup")
+//                    } else {
+//                        Text("\(coffeeAmount) cups")
+//                    }
+//                }
                 }
             }
         .navigationBarTitle("BetterRest")
