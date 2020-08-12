@@ -24,6 +24,11 @@ struct ContentView: View {
                     DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                     .labelsHidden()
                         .datePickerStyle(WheelDatePickerStyle())
+                    
+                    .onReceive([self.wakeUp].publisher.first()) { value in
+                               self.calculateBedtime()
+                    }
+                    
                 }
 //                VStack(alignment: .leading, spacing: 0){
 //                Text("When do you want to wake up?")
@@ -47,7 +52,9 @@ struct ContentView: View {
                         }
                     }.labelsHidden()
                     .pickerStyle(WheelPickerStyle())
-
+                    .onReceive([self.coffeeAmount].publisher.first()) { value in
+                               self.calculateBedtime()
+                    }
                 
 //                Stepper(value: $coffeeAmount, in: 1...20) {
 //                    if coffeeAmount == 1 {
@@ -59,15 +66,16 @@ struct ContentView: View {
                 }
             }
         .navigationBarTitle("BetterRest")
-        .navigationBarItems(trailing:
-            Button(action: calculateBedtime){
-                Text("Calculate")
-            }
-            )
-            
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
+        .navigationBarItems(trailing: Text("Your ideal bedtime is: \(alertMessage)"))
+//        .navigationBarItems(trailing:
+//            Button(action: calculateBedtime){
+//                Text("Calculate")
+//            }
+//            )
+//
+//                .alert(isPresented: $showingAlert) {
+//                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+//            }
         }
     }
     static var defaultWaketime: Date {
